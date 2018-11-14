@@ -43,7 +43,8 @@ imwrite(MBIndex,'MBI.tif');
 
 eimg=imadjust(MBIndex);
 imshow(eimg,'Colormap',jet(255));
-t=toc
+t=toc;
+display(t);
 
             
 
