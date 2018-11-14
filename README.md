@@ -5,4 +5,4 @@ MBI is proposed by Prof. X. Huang, Wuhan University.
 The paper has been published on IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing in 2011. 
 
 You can snip your community from Google Map and use it as input. 
-Just run the MBI.m directly, a UI will guide you to choose your image.
+Just run the MBI.m directly, UI will guide you to choose your image.
