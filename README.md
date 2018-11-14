@@ -6,3 +6,5 @@ The paper has been published on IEEE Journal of Selected Topics in Applied Earth
 
 You can snip your community from Google Map and use it as input. 
 Just run the MBI.m directly, UI will guide you to choose your image.
+
+See WIKI to find out more details. 
