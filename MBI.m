@@ -1,14 +1,15 @@
 %1. Read File with UI
-tic
+
 [fileName,filePath] = uigetfile({'*.tif';'*.*'},'Please Select Input Image');
 fileNamePath=[filePath,fileName]; %acquire absolute dir
+tic
 raw_img=imread(fileNamePath);
 disp('Size of input image:');
 [row,col,band]=size(raw_img);
 disp([row,col,band]);
 
 %2. Calculation of brightness: The maximum of multispectral bands for pixel x is recorded as its brightness value
-brightness_img=uint16(max(raw_img,[],3));%along the band dimension
+brightness_img=uint8(max(raw_img,[],3));%along the band dimension
 
 %3. Construction of MBI: The spectral-structural characteristics of buildings
 %3.1 White top-hat by reconstruction (W-TH):
@@ -37,9 +38,11 @@ for i=1:(S-1)
         MBIndex=MBIndex+double(squeeze(DMP(i,j,:,:)));
     end
 end
-MBIndex=uint16(MBIndex/(D*(S-1)));
+MBIndex=uint8(MBIndex/(D*(S-1)));
 imwrite(MBIndex,'MBI.tif');
-imshow(MBIndex);
+
+eimg=imadjust(MBIndex);
+imshow(eimg,'Colormap',jet(255));
 t=toc
 
             
