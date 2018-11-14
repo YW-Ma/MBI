@@ -1,9 +1,0 @@
-%Read File with UI
-[fileName,filePath] = uigetfile({'*.tif';'*.*'},'Please Select Input Image');
-fileNamePath=[filePath,fileName]; %acquire absolute dir
-raw_img=imread(fileNamePath);
-disp('Size of input image:');
-[row,col,channel]
-disp(size(raw_img));
-
-%
