@@ -10,7 +10,7 @@
 * Final results, the MBI index will be output.
 
 # Results
-* Input Image:
-![](https://github.com/YW-Ma/MBI/blob/master/images/origin.jpg)
-* MBI (Pseudocolor):
-![](https://github.com/YW-Ma/MBI/blob/master/images/MBIE_COLORMAP.jpg)
+* Input and Results(MBI):
+![](https://github.com/YW-Ma/MBI/blob/master/images/results.jpg)
+* Intermediate Results(DMPs):
+![](https://github.com/YW-Ma/MBI/blob/master/images/intermediate-results.jpg)
