@@ -4,16 +4,18 @@
 fileNamePath=[filePath,fileName]; %acquire absolute dir
 tic
 raw_img=imread(fileNamePath);
+
 disp('Size of input image:');
 [row,col,band]=size(raw_img);
 disp([row,col,band]);
 
 %2. Calculation of brightness: The maximum of multispectral bands for pixel x is recorded as its brightness value
-brightness_img=uint8(max(raw_img,[],3));%along the band dimension
+%PLEASE MAKE SURE YOUR INPUT IMAGE IS 8-BIT IMAGE!!!!!!
+brightness_img=im2uint8(max(raw_img,[],3));%along the band dimension
 
 %3. Construction of MBI: The spectral-structural characteristics of buildings
 %3.1 White top-hat by reconstruction (W-TH):
-length=2:5:52;%length of a linear Structure Element(SE)
+length=2:5:45;%length of a linear Structure Element(SE)
 S=size(length,2);%numbers of scale
 direction=[0;45;90;135];%four directions are considered
 D=size(direction,1);%numbers of directions
@@ -32,16 +34,21 @@ end
 %3.2 DMPs & MBI
 DMP=zeros(S-1,D,row,col);
 MBIndex=zeros(row,col);
+tDMPs=zeros(row,col);
 for i=1:(S-1)
     for j=1:D
         DMP(i,j,:,:)=abs(W_TH(i+1,j,:,:)-W_TH(i,j,:,:));
         MBIndex=MBIndex+double(squeeze(DMP(i,j,:,:)));
+        tDMPs=tDMPs+double(squeeze(DMP(i,j,:,:)));
     end
+    fileName=['DMP',num2str(i),'.tif'];
+    imwrite(tDMPs,fileName);
 end
 MBIndex=uint8(MBIndex/(D*(S-1)));
 imwrite(MBIndex,'MBI.tif');
 
 eimg=imadjust(MBIndex);
+imwrite(eimg,'MBIE.tif');
 imshow(eimg,'Colormap',jet(255));
 t=toc;
 display(t);
