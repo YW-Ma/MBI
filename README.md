@@ -5,9 +5,9 @@
 
 # Usage
 * You can snip your neighbours from Google Map and use it as input. (*.tif)
-* Run the MBI.m in your MATLAB, and it will guide you to choose your input image.
+* Run the `MBI.m` in your `MATLAB`, and it will guide you to choose your input image.
 * `Differential Mophological Spectrum`, as intermediate reuslts, will be output.
-* Final results, the MBI index will be output.
+* Final results, the `MBI(Morphological Building Index)` will be output.
 
 # Results
 * Input and Results(MBI):
