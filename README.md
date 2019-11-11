@@ -1,7 +1,7 @@
 # MBI
 * Morphological Building Index, extract `Buildings` from a high-resolution top view image(e.g. Quick Bird images) through a morphological method. 
 
-* MBI is proposed by Prof. X. Huang, Wuhan University. The paper has been published on IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing in 2011. 
+* MBI is proposed by Prof. X. Huang, Wuhan University. The paper has been published on [IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing in 2011](https://ieeexplore.ieee.org/document/6056582). 
 
 # Usage
 * You can snip your neighbours from Google Map and use it as input. 
