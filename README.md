@@ -13,4 +13,4 @@
 * Input Image:
 ![](https://github.com/YW-Ma/MBI/blob/master/images/Shenzhen.tif)
 * MBI:(Pseudocolor):
-![](https://github.com/YW-Ma/MBI/blob/master/images/MBIE_COLORMAP.tif)
+![](https://github.com/YW-Ma/MBI/blob/master/images/MBIE_COLORMAP.jpg)
