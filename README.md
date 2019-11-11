@@ -12,5 +12,5 @@
 # Results
 * Input Image:
 ![](https://github.com/YW-Ma/MBI/blob/master/images/origin.jpg)
-* MBI:(Pseudocolor):
+* MBI (Pseudocolor):
 ![](https://github.com/YW-Ma/MBI/blob/master/images/MBIE_COLORMAP.jpg)
